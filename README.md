@@ -3,7 +3,7 @@
 A PWA Progressive Web App maker. Generate a PWA template by filling details and get generated code instantly.
 
 ## Visit PWA MAKER
-Website: https://iamvkr.github.io/pwa-maker/dist
+Website: https://iamvkr.github.io/pwa-maker/
 
 ## 🛠 Tech Stack
 

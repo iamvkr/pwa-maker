@@ -1,4 +1,5 @@
 import React from 'react';
+import successLogo from '../assets/success.gif'
 
 const ModalView = ({downloadFn}) => {
     
@@ -12,7 +13,7 @@ const ModalView = ({downloadFn}) => {
                     </div>
                     <div className="modal-body">
                         {/* success */}
-                        <img src="/success.gif" style={{objectFit:"cover",overflow:"hidden"}} height={50} width={50} alt="" />
+                        <img src={successLogo} style={{objectFit:"cover",overflow:"hidden"}} height={50} width={50} alt="" />
                         {/* download message */}
                         Generate Success!
                     </div>

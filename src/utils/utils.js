@@ -1,3 +1,8 @@
+const base = "/pwa-maker";
+const manifestPath = base + "/sample/manifest.txt";
+const swPath = base + "/sample/sw.txt";
+const indexPath = base + "/sample/index.txt";
+
 const getdata = async(path)=>{
     const res = await fetch(path);
     const data = await res.text();
@@ -5,7 +10,7 @@ const getdata = async(path)=>{
 }
 const manifestContentGenerate = async(formData)=>{
     // console.log(formData);
-    let content =  await getdata("/sample/manifest.txt");
+    let content =  await getdata(manifestPath);
     content = content.replace("{{name}}",formData.app_name);
     content = content.replace("{{display}}",formData.app_display);
     content = content.replace("{{short_name}}",formData.app_short_name);
@@ -16,10 +21,10 @@ const manifestContentGenerate = async(formData)=>{
     return content;
 }
 const swGenerate = async()=>{
-    return await getdata("/sample/sw.txt");
+    return await getdata(swPath);
 }
 const indexGenerate = async(formData)=>{
-    let content =  await getdata("/sample/index.txt");
+    let content =  await getdata(indexPath);
     content = content.replace("{{name}}",formData.app_name);
     content = content.replace("{{theme_color}}",formData.app_theme_color);
     content = content.replace("{{description}}",formData.app_desc);
